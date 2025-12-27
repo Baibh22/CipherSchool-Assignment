@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  color: $color-gray-900;
+  background-color: $color-gray-50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-4;
+  color: $color-gray-900;
+}
+
+h1 {
+  font-size: $font-size-2xl;
+  
+  @include tablet-up {
+    font-size: $font-size-3xl;
+  }
+  
+  @include desktop-up {
+    font-size: $font-size-4xl;
+  }
+}
+
+h2 {
+  font-size: $font-size-xl;
+  
+  @include tablet-up {
+    font-size: $font-size-2xl;
+  }
+  
+  @include desktop-up {
+    font-size: $font-size-3xl;
+  }
+}
+
+h3 {
+  font-size: $font-size-lg;
+  
+  @include tablet-up {
+    font-size: $font-size-xl;
+  }
+  
+  @include desktop-up {
+    font-size: $font-size-2xl;
+  }
+}
+
+h4 {
+  font-size: $font-size-base;
+  
+  @include tablet-up {
+    font-size: $font-size-lg;
+  }
+}
+
+h5 {
+  font-size: $font-size-sm;
+  
+  @include tablet-up {
+    font-size: $font-size-base;
+  }
+}
+
+h6 {
+  font-size: $font-size-xs;
+  
+  @include tablet-up {
+    font-size: $font-size-sm;
+  }
+}
+
+p {
+  margin-bottom: $spacing-4;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition-base;
+  
+  &:hover {
+    color: $color-primary-dark;
+    text-decoration: underline;
+  }
+  
+  @include focus-visible;
+}
+
+ul, ol {
+  margin-bottom: $spacing-4;
+  padding-left: $spacing-6;
+}
+
+li {
+  margin-bottom: $spacing-1;
+}
+
+code {
+  font-family: $font-family-mono;
+  font-size: 0.875em;
+  background-color: $color-gray-100;
+  padding: $spacing-1 $spacing-2;
+  border-radius: $border-radius-sm;
+  color: $color-gray-800;
+}
+
+pre {
+  font-family: $font-family-mono;
+  background-color: $color-gray-900;
+  color: $color-gray-100;
+  padding: $spacing-4;
+  border-radius: $border-radius-md;
+  overflow-x: auto;
+  margin-bottom: $spacing-4;
+  
+  code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: $spacing-4;
+}
+
+th, td {
+  padding: $spacing-3;
+  text-align: left;
+  border-bottom: 1px solid $color-gray-200;
+}
+
+th {
+  font-weight: $font-weight-semibold;
+  background-color: $color-gray-50;
+  color: $color-gray-700;
+}
+
+input, textarea, select, button {
+  font-family: inherit;
+}
+
+.sr-only {
+  @include sr-only;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-mono {
+  font-family: $font-family-mono;
+}
+
+.font-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+}
+
+.text-xl {
+  font-size: $font-size-xl;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+.text-danger {
+  color: $color-danger;
+}
+
+.text-success {
+  color: $color-success;
+}
+
+.text-warning {
+  color: $color-warning;
+}
+
+.text-gray-500 {
+  color: $color-gray-500;
+}
+
+.text-gray-600 {
+  color: $color-gray-600;
+}
+
+.text-gray-700 {
+  color: $color-gray-700;
+}
+
+.mb-0 { margin-bottom: 0; }
+.mb-2 { margin-bottom: $spacing-2; }
+.mb-4 { margin-bottom: $spacing-4; }
+.mb-6 { margin-bottom: $spacing-6; }
+.mb-8 { margin-bottom: $spacing-8; }
+
+.mt-0 { margin-top: 0; }
+.mt-2 { margin-top: $spacing-2; }
+.mt-4 { margin-top: $spacing-4; }
+.mt-6 { margin-top: $spacing-6; }
+.mt-8 { margin-top: $spacing-8; }
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+@include tablet-up {
+  .tablet-hidden {
+    display: none;
+  }
+  
+  .tablet-block {
+    display: block;
+  }
+}
+
+@include desktop-up {
+  .desktop-hidden {
+    display: none;
+  }
+  
+  .desktop-block {
+    display: block;
+  }
+}
